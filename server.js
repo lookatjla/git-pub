@@ -7,8 +7,9 @@ app.get('/', (req, res) => {
 
 
 app.get('/drinks', (req, res) => {
-    res.send(drinks);
-}); // 6
+    // res.send(drinks); // displays data in json format
+    res.render('./drinks_index.ejs'); // displays css from drinks_index.ejs
+}); // 6 (res.send); 7 (res.render)
 
 app.listen(3000, () => {
     console.log('App is listening on port 3000');
